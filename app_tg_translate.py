@@ -12,13 +12,13 @@ from translate import Translator
 logging.basicConfig(level=logging.INFO)
 
 # Get the OpenAI API key
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = 'YOUR_OWN_OPENAI_KEY'
 openai_api_key = os.environ["OPENAI_API_KEY"]
 if not openai_api_key:
     raise ValueError("OPENAI_API_KEY environment variable is not set")
 
 # Initialize the bot and dispatcher
-bot = Bot(token="6064761154:AAHpetSzNO5SEqNGfrZbph7vBErsWPn9TFQ")
+bot = Bot(token="BOT_KEY")
 dp = Dispatcher(bot)
 
 # Define the AI model
