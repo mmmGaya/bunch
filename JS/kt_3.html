@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          function Figure() {
+            words = 'Мне нравится ';
+            alert(words + document.form1.fname.value + ' ' + document.form1.cname.value );
+            // alert('Длина ' + document.form1.fname.lenght);
+          }
+
+        function choose() {
+            if (document.form2.iflag.checked) {
+                alert('Вы выбрали мороженое');
+            }
+            if (document.form2.cflag.checked) {
+                alert('Вы выбрали шоколад');
+            }            
+        }          
+    </script>
+</head>
+<body>
+    <form name="form1">
+        Введите любую геом. фигуру:
+        <input type="text" name="fname"><br><br>
+        Введите любую геом. фигуру:
+        <input type="text" name="cname"><br>
+        <input type="button" value="Нажать" onclick=Figure()>
+    </form>
+
+    <form name="form2">
+        <h3>Опрос</h3>
+        <input type="text" value="Введите имя" onclick="alert('Внимательно вводите свое имя')">
+        <div>
+        <p>Что ты выберешь: </p>
+        <input type="checkbox" name="iflag">Мороженое<br>
+        <input type="checkbox" name="cflag">Шоколад<br>
+        <input type="button" onclick=choose() value="Сохранить результат">
+        </div><br>      
+        <input type="submit" value="Отправить данные" onclick="alert('Спасибо, что прошли опрос')">
+    </form>
+
+
+    
+</body>
+</html>
